@@ -11,20 +11,13 @@ class Person {
         this.interests = interests;
     }
     String hello() {
-
-        String isOrAre;
         if (interests.length == 1) {
-            isOrAre = "is";
-        } else {
-            isOrAre = "are";
+            return String.format("Hello, my name is %s and I am a %s year old %s. My interests %s %s.",name,age,gender,"is",printList());
         }
-
-        return String.format("Hello, my name is %s and I am a %s year old %s. My interests %s %s.",name,age,gender,isOrAre,printList());
+        return String.format("Hello, my name is %s and I am a %s year old %s. My interests %s %s.",name,age,gender,"are",printList());
     }
 
     // This is a method to go through a list of interests a person has and then return the list as a string.
-    // If the user put only one list item then program will output "My interest is" instead of "My interest are".
-    // If the user does not have any interest then the program will output "My interest are none".
 
     private String printList() {
 
